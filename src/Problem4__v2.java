@@ -31,15 +31,15 @@ public class Problem4__v2 {
         }
         
         
-        if (number == reverseNumber){
-            System.out.println(reverseNumber+" = reverse number and  number = "+number);
-            return true;}
+        if (number == reverseNumber)            
+            return true;
         else 
             return false;
     }
+    
     public static void main (String args[])
     { int greatestnumber = 0;
-        Problem4 obj = new Problem4();
+        Problem4__v2 obj = new Problem4__v2();
         
         
         for (int i = 999; i>= 100 ; i--)
@@ -48,10 +48,11 @@ public class Problem4__v2 {
             {
                 if ( obj.checkPalindrome(i*j) && i*j > greatestnumber)
                 {    greatestnumber = i*j;
-                System.out.println("i = " + i+ " and j = " + j);
+                //System.out.println("i = " + i+ " and j = " + j);
                 }
             }
         }
+        
         
         System.out.println(greatestnumber);
     }
