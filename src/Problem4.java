@@ -26,12 +26,21 @@ public class Problem4 {
         {            
             reverseNumber =  reverseNumber + (number%i)*j;
             number = number - number%i;  
+            
          
-        }         
+        }      
+        if (temp > 100000)
+        {
         if (reverseNumber == number)
+        {
+            //System.out.println("Rev Num :" +reverseNumber+" and Num is : "+number + "Original Number is :" +temp);
             return true;
+        }
         else
             return false;
+        }
+        else return false;
+  
     }
     public static void main (String args[])
     { int greatestnumber = 0;

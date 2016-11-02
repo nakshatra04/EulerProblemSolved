@@ -30,8 +30,10 @@ public class Problem4__v2 {
             temp = temp/10;           
         }
         
-        if (number == reverseNumber)
-            return true;
+        
+        if (number == reverseNumber){
+            System.out.println(reverseNumber+" = reverse number and  number = "+number);
+            return true;}
         else 
             return false;
     }
