@@ -25,33 +25,44 @@ public class Problem5 {
         totalSize = size;
         for (int i = 1; i<=size;i++)
         {
-            numbers[i]= i;
+            numbers[i]= i;           
         }
         
     }
     public static void main(String args[])
     {
-        int mul= 1;
-        Problem5 obj = new Problem5(10);
-        for (int i =1; i<=obj.totalSize; i++)
-        {
+        int mul= 1; 
+        boolean ask = false;
+        Problem5 obj = new Problem5(20);
+        for (int i =2; i<=obj.totalSize; i++)
+        { 
+            ask = false;
             for (int j= 2; j<=obj.totalSize; j++)
             {
-                if(obj.numbers[i] != 1)
+                if(obj.numbers[j] != 1)
                 {   
-                    if (obj.numbers[i]%j == 0)
+                    if (obj.numbers[j]%i == 0)
                     {
-                        obj.numbers[i]= obj.numbers[i]/j;
-                        mul = mul*j;
+                        
+                        obj.numbers[j]= obj.numbers[j]/i;
+                        ask = true;
+                        
                     }
                 }
             }
+            if (ask){
+                    System.out.println(i);
+                    mul = mul * i;
+                }
         }
-        for (int j=1; j<=obj.totalSize; j++)
+        System.out.println(mul);
+        for (int k = 2 ; k<=obj.totalSize; k++)
         {
-            
-            
-            //System.out.println(obj.numbers[j]);
+            if (obj.numbers[k] !=1)
+            {
+            mul = mul* obj.numbers[k];
+           
+            }
         }
         System.out.println(mul);
     }
