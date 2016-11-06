@@ -56,15 +56,7 @@ public class Problem5 {
                 }
         }
         System.out.println(mul);
-        for (int k = 2 ; k<=obj.totalSize; k++)
-        {
-            if (obj.numbers[k] !=1)
-            {
-            mul = mul* obj.numbers[k];
-           
-            }
-        }
-        System.out.println(mul);
+        
     }
     
 }
